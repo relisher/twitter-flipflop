@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="10.5">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings>
+        <Position x="198" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Text Box (163)">4B946F9AB856A349ADB09D6120DAF80F4A3FA1DD0A7EC9089F5033F5B1AAD82ACE7696D20CF8A0CA0664C4EDEB96CED6151A690D02E9C43BE342A375C631EE40A8039B4C6D2D9D582B5CD9C83F29216C284EF679D0FE1FCF00DD0FA603254157C18B98BB5045C520D5B2B1EA8D9162E0DAFBBEB19F976F4FDDE7F56A2F8B2B8AA4EE3B92C7B3AC2FD998CE1B00C06CD086A3BD79870CB044EE9284EA58AAFE9314108732E55A2F61F01AEDA6B17DD6E56029637B36C6CAD9ED0E4E4EF2CC88441A725A7C88C882130114F546C7E543B343AAC72E1884BA7AF3B46D76D8248</Value>
+          <Value name="Text Box (165)">4D95CA40A61C5A1E4E6054C5C5DCE1E3080C13212BAFDFE85D84639746DB12A0E79DA72ED1794E6E26AAC00F814E52963B583E0F312C7FD57C8FB5D78E7B502CCA1DF6848BB98CB0208DBE7CB3E510AADD70DDDD8080761E6F8FD7E6FF90155461A9ACF983665BE0B41F932F39F20024B3CEF5F61D7ACA20220E03CF302C7333C82D148489E8E464D60FC0E7F6C331FB15A0BDB4C7AADA5D14C7E8159857315EC60A6E466367AA3AC1738B3ACA62D73AE1FF73ABF8F06E8846CD6E17AF4910C19AC007E2F0320F50FE965E8C334D335719BA41DA940CB5E41250688A8525E262ABB45ECE0D5181CE750AE00B0E68BCD35A6B0960A9264A8B68AC04D4714C6A8AA50421A0029D33D293784EEFE25AE5EB8BCECFFBA58FAE55765ABBC7B3D0EA20B1151681310A2FCB75F0134734F2137195FE200F34467A36EDAE395D7B7A5502AA6A5A1CDC10644F632017AF3DD5D1ED8185B321109CAAC98139519D9E93D9960D486AF43458BF9FBDC1F89E1CB1A4AD4577AF828086636A90C43B8F2ECDE2EBFFA6F781C2A2E576A1E681EA7CF580528A8F1CCC4DAEC20B495A86A3AC4E08CD1F61D34676230</Value>
+          <Value name="Text Box (167)">PoliticalFlop</Value>
+          <Value name="Numeric Up Down (110)">500</Value>
+          <Value name="Radio Button Group (39)">True</Value>
+          <Value name="Text Box (7)">Obama</Value>
+          <Value name="Text Box (9)" />
+          <Value name="Text Box (12)" />
+          <Value name="Text Box (14)" />
+          <Value name="Text Box (16)" />
+          <Value name="Text Box (18)">HillaryClinton</Value>
+          <Value name="Text Box (20)" />
+          <Value name="Text Box (26)" />
+          <Value name="Radio Button Group (41)">False</Value>
+          <Value name="Text Box (35)" />
+          <Value name="Check Box Group (125)">False</Value>
+          <Value name="Radio Button Group (81)">True</Value>
+          <Value name="Map (54)">&lt;Mode&gt;Draw&lt;/Mode&gt;&lt;ReferenceFile /&gt;&lt;JSMapSettings&gt;{"base":true,"drawn features":true}&lt;/JSMapSettings&gt;&lt;Bounds&gt;&lt;MinX&gt;-124.848975&lt;/MinX&gt;&lt;MaxX&gt;-66.885075&lt;/MaxX&gt;&lt;MinY&gt;24.396308&lt;/MinY&gt;&lt;MaxY&gt;49.384359&lt;/MaxY&gt;&lt;/Bounds&gt;&lt;NumRows value="0" /&gt;&lt;Fields&gt;&lt;Field name="SpatialObj" /&gt;&lt;/Fields&gt;&lt;Data /&gt;</Value>
+          <Value name="Radio Button Group (85)">False</Value>
+          <Value name="Text Box (69)" />
+          <Value name="Text Box (117)" />
+          <Value name="Drop Down (121)">AL</Value>
+          <Value name="Text Box (123)" />
+          <Value name="Numeric Up Down (63)">5</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Twitter Search\Twitter Search.yxmc" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="330" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\arelin\Downloads\alteryx_Clinton_obama.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>alteryx_Clinton_obama.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Data" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
