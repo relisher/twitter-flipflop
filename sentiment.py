@@ -7,11 +7,11 @@ tone_analyzer = ToneAnalyzerV3(
    password='HKOLUotXGrY7',
    version='2016-05-19')
 
+def analyze(tweet):
+	x = json.dumps(tone_analyzer.tone(text=tweet), indent=2)
 
-x = json.dumps(tone_analyzer.tone(text='A word is dead when it is said, some say. Also I love sucking huge penises.'), indent=2)
+	f = open('info.json', 'r+')
+	f.write(x)
+	f.close()
 
-f = open('info.json', 'r+')
-f.write(x)
-f.close()
-
-print(x)
+	print(x)
