@@ -6,27 +6,27 @@
         "tones": [
           {
             "tone_name": "Anger", 
-            "score": 0.074386, 
+            "score": 0.183997, 
             "tone_id": "anger"
           }, 
           {
             "tone_name": "Disgust", 
-            "score": 0.014621, 
+            "score": 0.098868, 
             "tone_id": "disgust"
           }, 
           {
             "tone_name": "Fear", 
-            "score": 0.005008, 
+            "score": 0.088494, 
             "tone_id": "fear"
           }, 
           {
             "tone_name": "Joy", 
-            "score": 0.873852, 
+            "score": 0.546825, 
             "tone_id": "joy"
           }, 
           {
             "tone_name": "Sadness", 
-            "score": 0.081124, 
+            "score": 0.141662, 
             "tone_id": "sadness"
           }
         ], 
@@ -47,7 +47,7 @@
           }, 
           {
             "tone_name": "Tentative", 
-            "score": 0.647781, 
+            "score": 0.0, 
             "tone_id": "tentative"
           }
         ], 
@@ -58,307 +58,32 @@
         "tones": [
           {
             "tone_name": "Openness", 
-            "score": 0.056856, 
+            "score": 0.456853, 
             "tone_id": "openness_big5"
           }, 
           {
             "tone_name": "Conscientiousness", 
-            "score": 0.651027, 
+            "score": 0.295542, 
             "tone_id": "conscientiousness_big5"
           }, 
           {
             "tone_name": "Extraversion", 
-            "score": 0.662318, 
+            "score": 0.593244, 
             "tone_id": "extraversion_big5"
           }, 
           {
             "tone_name": "Agreeableness", 
-            "score": 0.857579, 
+            "score": 0.621227, 
             "tone_id": "agreeableness_big5"
           }, 
           {
             "tone_name": "Emotional Range", 
-            "score": 0.572874, 
+            "score": 0.630308, 
             "tone_id": "emotional_range_big5"
           }
         ], 
         "category_name": "Social Tone"
       }
     ]
-  }, 
-  "sentences_tone": [
-    {
-      "input_to": 64, 
-      "text": "A fantastic day in D.C. Met with President Obama for first time.", 
-      "sentence_id": 0, 
-      "tone_categories": [
-        {
-          "category_id": "emotion_tone", 
-          "tones": [
-            {
-              "tone_name": "Anger", 
-              "score": 0.050173, 
-              "tone_id": "anger"
-            }, 
-            {
-              "tone_name": "Disgust", 
-              "score": 0.087672, 
-              "tone_id": "disgust"
-            }, 
-            {
-              "tone_name": "Fear", 
-              "score": 0.016924, 
-              "tone_id": "fear"
-            }, 
-            {
-              "tone_name": "Joy", 
-              "score": 0.783768, 
-              "tone_id": "joy"
-            }, 
-            {
-              "tone_name": "Sadness", 
-              "score": 0.12823, 
-              "tone_id": "sadness"
-            }
-          ], 
-          "category_name": "Emotion Tone"
-        }, 
-        {
-          "category_id": "language_tone", 
-          "tones": [
-            {
-              "tone_name": "Analytical", 
-              "score": 0.121371, 
-              "tone_id": "analytical"
-            }, 
-            {
-              "tone_name": "Confident", 
-              "score": 0.0, 
-              "tone_id": "confident"
-            }, 
-            {
-              "tone_name": "Tentative", 
-              "score": 0.0, 
-              "tone_id": "tentative"
-            }
-          ], 
-          "category_name": "Language Tone"
-        }, 
-        {
-          "category_id": "social_tone", 
-          "tones": [
-            {
-              "tone_name": "Openness", 
-              "score": 0.082155, 
-              "tone_id": "openness_big5"
-            }, 
-            {
-              "tone_name": "Conscientiousness", 
-              "score": 0.895451, 
-              "tone_id": "conscientiousness_big5"
-            }, 
-            {
-              "tone_name": "Extraversion", 
-              "score": 0.685077, 
-              "tone_id": "extraversion_big5"
-            }, 
-            {
-              "tone_name": "Agreeableness", 
-              "score": 0.781497, 
-              "tone_id": "agreeableness_big5"
-            }, 
-            {
-              "tone_name": "Emotional Range", 
-              "score": 0.911587, 
-              "tone_id": "emotional_range_big5"
-            }
-          ], 
-          "category_name": "Social Tone"
-        }
-      ], 
-      "input_from": 0
-    }, 
-    {
-      "input_to": 102, 
-      "text": "Really good meeting, great chemistry.", 
-      "sentence_id": 1, 
-      "tone_categories": [
-        {
-          "category_id": "emotion_tone", 
-          "tones": [
-            {
-              "tone_name": "Anger", 
-              "score": 0.072163, 
-              "tone_id": "anger"
-            }, 
-            {
-              "tone_name": "Disgust", 
-              "score": 0.005648, 
-              "tone_id": "disgust"
-            }, 
-            {
-              "tone_name": "Fear", 
-              "score": 0.023777, 
-              "tone_id": "fear"
-            }, 
-            {
-              "tone_name": "Joy", 
-              "score": 0.887332, 
-              "tone_id": "joy"
-            }, 
-            {
-              "tone_name": "Sadness", 
-              "score": 0.053272, 
-              "tone_id": "sadness"
-            }
-          ], 
-          "category_name": "Emotion Tone"
-        }, 
-        {
-          "category_id": "language_tone", 
-          "tones": [
-            {
-              "tone_name": "Analytical", 
-              "score": 0.882284, 
-              "tone_id": "analytical"
-            }, 
-            {
-              "tone_name": "Confident", 
-              "score": 0.0, 
-              "tone_id": "confident"
-            }, 
-            {
-              "tone_name": "Tentative", 
-              "score": 0.0, 
-              "tone_id": "tentative"
-            }
-          ], 
-          "category_name": "Language Tone"
-        }, 
-        {
-          "category_id": "social_tone", 
-          "tones": [
-            {
-              "tone_name": "Openness", 
-              "score": 0.250061, 
-              "tone_id": "openness_big5"
-            }, 
-            {
-              "tone_name": "Conscientiousness", 
-              "score": 0.290205, 
-              "tone_id": "conscientiousness_big5"
-            }, 
-            {
-              "tone_name": "Extraversion", 
-              "score": 0.610255, 
-              "tone_id": "extraversion_big5"
-            }, 
-            {
-              "tone_name": "Agreeableness", 
-              "score": 0.590549, 
-              "tone_id": "agreeableness_big5"
-            }, 
-            {
-              "tone_name": "Emotional Range", 
-              "score": 0.131936, 
-              "tone_id": "emotional_range_big5"
-            }
-          ], 
-          "category_name": "Social Tone"
-        }
-      ], 
-      "input_from": 65
-    }, 
-    {
-      "input_to": 130, 
-      "text": "Melania liked Mrs. O a lot!", 
-      "sentence_id": 2, 
-      "tone_categories": [
-        {
-          "category_id": "emotion_tone", 
-          "tones": [
-            {
-              "tone_name": "Anger", 
-              "score": 0.243886, 
-              "tone_id": "anger"
-            }, 
-            {
-              "tone_name": "Disgust", 
-              "score": 0.020867, 
-              "tone_id": "disgust"
-            }, 
-            {
-              "tone_name": "Fear", 
-              "score": 0.016701, 
-              "tone_id": "fear"
-            }, 
-            {
-              "tone_name": "Joy", 
-              "score": 0.418011, 
-              "tone_id": "joy"
-            }, 
-            {
-              "tone_name": "Sadness", 
-              "score": 0.362919, 
-              "tone_id": "sadness"
-            }
-          ], 
-          "category_name": "Emotion Tone"
-        }, 
-        {
-          "category_id": "language_tone", 
-          "tones": [
-            {
-              "tone_name": "Analytical", 
-              "score": 0.0, 
-              "tone_id": "analytical"
-            }, 
-            {
-              "tone_name": "Confident", 
-              "score": 0.0, 
-              "tone_id": "confident"
-            }, 
-            {
-              "tone_name": "Tentative", 
-              "score": 0.75152, 
-              "tone_id": "tentative"
-            }
-          ], 
-          "category_name": "Language Tone"
-        }, 
-        {
-          "category_id": "social_tone", 
-          "tones": [
-            {
-              "tone_name": "Openness", 
-              "score": 0.160635, 
-              "tone_id": "openness_big5"
-            }, 
-            {
-              "tone_name": "Conscientiousness", 
-              "score": 0.105651, 
-              "tone_id": "conscientiousness_big5"
-            }, 
-            {
-              "tone_name": "Extraversion", 
-              "score": 0.428274, 
-              "tone_id": "extraversion_big5"
-            }, 
-            {
-              "tone_name": "Agreeableness", 
-              "score": 0.700735, 
-              "tone_id": "agreeableness_big5"
-            }, 
-            {
-              "tone_name": "Emotional Range", 
-              "score": 0.231257, 
-              "tone_id": "emotional_range_big5"
-            }
-          ], 
-          "category_name": "Social Tone"
-        }
-      ], 
-      "input_from": 103
-    }
-  ]
+  }
 }
