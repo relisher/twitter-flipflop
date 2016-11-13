@@ -1,13 +1,13 @@
 import tweepy
 
-trumpObama =[];
-trumpRigged = [];
-trumpObamacare = [];
-trumpGay = [];
-clintonTPP = [];
-clintonRussia = [];
-clintonGay = [];
-clintonKeystone =[];
+trumpObama =[]
+trumpRigged = []
+trumpObamacare = []
+trumpGay = []
+clintonTPP = []
+clintonRussia = []
+clintonGay = []
+clintonKeystone =[]
 
 def search():
     auth = tweepy.OAuthHandler("xmE8yTuZ65lFReEbDUEIn5aqV", "z0tlMMPm7fxmIM5o21cbhfG5SS0NPgBLF6w4YxhyR0kCi4eeyE")
@@ -15,8 +15,8 @@ def search():
 
     api = tweepy.API(auth)
 
-    statusesTrump = tweepy.Cursor(api.user_timeline, user_id="25073877", count="10").items()
-    statusesClinton = tweepy.Cursor(api.user_timeline, user_id="1339835893", count="10").items();
+    statusesTrump = tweepy.Cursor(api.user_timeline, user_id="25073877", count="100").items()
+    statusesClinton = tweepy.Cursor(api.user_timeline, user_id="1339835893", count="100").items();
 
 
     for s in statusesTrump:
@@ -39,7 +39,7 @@ def search():
         elif("gay" in s.text.lower()):
             clintonGay.append(s)
 
-    return        
+    return
 
 def getClintonGay():
     return clintonGay
@@ -49,11 +49,11 @@ def getTrumpObama():
     return trumpObama
 def getTrumpRigged():
     return trumpRigged
-def getClintonGay():
+def getTrumpObamacare():
     return trumpObamacare
-def getClintonGay():
+def getClintonTPP():
     return clintonTPP
-def getClintonGay():
+def getClintonRussia():
     return clintonRussia
-def getClintonGay():
+def getClintonKeystone():
     return clintonKeystone
