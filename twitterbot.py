@@ -20,7 +20,7 @@ def search():
 
 
     for s in statusesTrump:
-        if(!s.text.startsWith("RT")):
+        if(not (s.text.startsWith("RT"))):
             if("rigged" in s.text.lower()):
                 trumpRigged.append(s)
             elif("obamacare" in s.text.lower()):
@@ -31,7 +31,7 @@ def search():
                 trumpObama.append(s)
 
     for s in statusesClinton:
-        if(!s.text.startsWith("RT")):
+        if(not (s.text.startsWith("RT"))):
             if("tpp" in s.text.lower()):
                 clintonTPP.append(s)
             elif("russia" in s.text.lower()):
