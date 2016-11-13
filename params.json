@@ -1,0 +1,6 @@
+{
+  "name": "Twitter-flipflop",
+  "tagline": "Find when politicians flip opinions on Twitter",
+  "body": "### Welcome to Twitter-flipflop.\r\nTwitter flip flop is an automated program that uses tweepy and alteryx output when available in order to track politicians on Twitter and how their opinions flip flop. This helps people like us hold politicians accountable for their opinions and can show us how opinions change using politicians' own words! Check it out on [Twitter](https://twitter.com/FullFlipFlop)\r\n\r\n### Authors and Contributors\r\nThis project was created by @triton11 and @relisher at YHack. You can find us here:\r\n\r\n[Tristrum Tuttle](http://triton11.github.io/)\r\n\r\n[Anton Relin](http://www.sas.upenn.edu/~arelin/)\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
