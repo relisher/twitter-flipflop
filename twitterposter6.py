@@ -18,33 +18,43 @@ class twitterposter:
         	self.tweetlist = []
 		
 	
-	def newtweet(self, top, id, neg, pos, rando):
-		message = self.topic[top][0][1] + " just changed their opinion on " + self.topic[top][0][2]
-		if (self.topic[top][2] > self.topic[top][3] and pos > neg):
+	def newtweet(self, top, id, neg, pos):
+		#tweets= api.user_timeline(id=797478447283077121, include_rts=True)
+
+		#for tweet in tweets :
+     		#	api.destroy_status(tweet.id)
+
+		message = str(self.topic[top][4]) + ". " + self.topic[top][0][1] + " just changed their opinion on " + self.topic[top][0][2] + " to " + str(pos - neg)
+		count = self.topic[top][4]
+		if (self.topic[top][2] > self.topic[top][3] and pos - neg > 0.5):
 			print ("a" + str(self.topic[top][1]))
 			print ("id" + str(id))
 			m = api.get_status(id)
-			a = m.text[:136] + rando
+			a = str(count) + ". " + m.text[:136]
+			m1 = api.get_status(self.topic[top][1])
+			a1 = str(count) + ". " + m1.text[:136]
 			api.update_status(status=a)
-			api.retweet(self.topic[top][1])
+			api.update_status(status=a1)
 			api.update_status(status=message)
 			self.topic[top][1] = id
 			self.topic[top][2] = neg
 			self.topic[top][3] = pos
-		elif (self.topic[top][2] < self.topic[top][3] and neg > pos):
+			self.topic[top][4] = self.topic[top][4] + 1
+		elif (self.topic[top][2] < self.topic[top][3] and neg - pos > 0.5):
 			print ("a" + str(self.topic[top][1]))
 			print ("id" + str(id))
 			m = api.get_status(id)
-			a = m.text[:136] + rando
+			a = str(count) + m.text[:136]
                         api.update_status(status=a)
                         api.retweet(self.topic[top][1])
                         api.update_status(status=message)
                         self.topic[top][1] = id
                         self.topic[top][2] = neg
-                        self.topic[top][3] = pos	
+                        self.topic[top][3] = pos
+                        self.topic[top][4] = self.topic[top][4] + 1	
 	
 	def addtopic(self, name, issue, id, neg, pos):
-		self.topic.append([[self.counter, name, issue], id, neg, pos])
+		self.topic.append([[self.counter, name, issue], id, neg, pos, 0])
 		self.counter += 1
 		print self.counter-1
 		return self.counter-1
@@ -65,7 +75,7 @@ class twitterposter:
 		for item in self.tweetlist:
                         rando = str(random.randint(0,100))
                         print item[4]
- 			self.newtweet(number, item[4], item[5], item[6], rando)
+ 			self.newtweet(number, item[4], item[5], item[6])
 	
 	def run(self, file, number):
 	        name = getcsv.getName(file)
@@ -83,4 +93,4 @@ class twitterposter:
 	                self.tweetlist.append((body, name, user, date, id, neg, pos))
 	        for item in self.tweetlist:
 			rando = str(random.randint(0,100))
-	                self.newtweet(number, item[4], item[5], item[6], rando)
+	                self.newtweet(number, item[4], item[5], item[6])

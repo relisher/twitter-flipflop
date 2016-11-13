@@ -19,7 +19,12 @@ class twitterposter:
 		
 	
 	def newtweet(self, top, id, neg, pos, rando):
-		message = self.topic[top][0][1] + " just changed their opinion on " + self.topic[top][0][2]
+		tweets= api.user_timeline(id=797478447283077121, include_rts=True)
+
+		for tweet in tweets :
+     			api.destroy_status(tweet.id)
+
+		message = self.topic[top][0][1] + " just changed their opinion on " + self.topic[top][0][2] + rando
 		if (self.topic[top][2] > self.topic[top][3] and pos > neg):
 			print ("a" + str(self.topic[top][1]))
 			print ("id" + str(id))
