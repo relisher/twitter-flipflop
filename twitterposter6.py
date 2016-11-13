@@ -27,12 +27,14 @@ class twitterposter:
 		message = str(self.topic[top][4]) + ". " + self.topic[top][0][1] + " just changed their opinion on " + self.topic[top][0][2] + " to " + str(pos - neg)
 		count = self.topic[top][4]
 		if (self.topic[top][2] > self.topic[top][3] and pos - neg > 0.5):
-			print ("a" + str(self.topic[top][1]))
-			print ("id" + str(id))
+			
 			m = api.get_status(id)
 			a = str(count) + ". " + m.text[:136]
 			m1 = api.get_status(self.topic[top][1])
 			a1 = str(count) + ". " + m1.text[:136]
+			print a1
+			print a
+			print message
 			api.update_status(status=a1)
 			api.update_status(status=a)
 			api.update_status(status=message)
@@ -41,12 +43,14 @@ class twitterposter:
 			self.topic[top][3] = pos
 			self.topic[top][4] = self.topic[top][4] + 1
 		elif (self.topic[top][2] < self.topic[top][3] and neg - pos > 0.5):
-			print ("a" + str(self.topic[top][1]))
-			print ("id" + str(id))
+			
 			m = api.get_status(id)
 			a = str(count) + ". " + m.text[:136]
 			m1 = api.get_status(self.topic[top][1])
 			a1 = str(count) + ". " + m1.text[:136]
+			print a1
+			print a
+			print message
 			api.update_status(status=a1)
 			api.update_status(status=a)
 			api.update_status(status=message)
@@ -65,6 +69,7 @@ class twitterposter:
 		name = file[0].user.name
 	        user = file[0].user.screen_name
 	        tweet = []
+	        self.tweetlist = []
 		for it in file:
 		        print it.id_str
 			body = it.text
@@ -83,6 +88,7 @@ class twitterposter:
 	        name = getcsv.getName(file)
 	        user = getcsv.getUser(file)
 	        tweet = getcsv.getTweets(file)
+	        self.tweetlist = []
 	        for item in tweet:
 	                #print item
 	                body = item[0]
