@@ -26,7 +26,7 @@ class twitterposter:
 
 		message = str(self.topic[top][4]) + ". " + self.topic[top][0][1] + " just changed their opinion on " + self.topic[top][0][2] + " to " + str(pos - neg)
 		count = self.topic[top][4]
-		if (self.topic[top][2] > self.topic[top][3] and pos - neg > 0.5):
+		if (self.topic[top][2] > self.topic[top][3] and pos - neg > 0.25):
 			
 			m = api.get_status(id)
 			a = str(count) + ". " + m.text[:136]
@@ -42,7 +42,7 @@ class twitterposter:
 			self.topic[top][2] = neg
 			self.topic[top][3] = pos
 			self.topic[top][4] = self.topic[top][4] + 1
-		elif (self.topic[top][2] < self.topic[top][3] and neg - pos > 0.5):
+		elif (self.topic[top][2] < self.topic[top][3] and neg - pos > 0.25):
 			
 			m = api.get_status(id)
 			a = str(count) + ". " + m.text[:136]
