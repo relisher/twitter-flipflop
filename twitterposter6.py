@@ -33,8 +33,8 @@ class twitterposter:
 			a = str(count) + ". " + m.text[:136]
 			m1 = api.get_status(self.topic[top][1])
 			a1 = str(count) + ". " + m1.text[:136]
-			api.update_status(status=a)
 			api.update_status(status=a1)
+			api.update_status(status=a)
 			api.update_status(status=message)
 			self.topic[top][1] = id
 			self.topic[top][2] = neg
@@ -44,14 +44,16 @@ class twitterposter:
 			print ("a" + str(self.topic[top][1]))
 			print ("id" + str(id))
 			m = api.get_status(id)
-			a = str(count) + m.text[:136]
-                        api.update_status(status=a)
-                        api.retweet(self.topic[top][1])
-                        api.update_status(status=message)
-                        self.topic[top][1] = id
-                        self.topic[top][2] = neg
-                        self.topic[top][3] = pos
-                        self.topic[top][4] = self.topic[top][4] + 1	
+			a = str(count) + ". " + m.text[:136]
+			m1 = api.get_status(self.topic[top][1])
+			a1 = str(count) + ". " + m1.text[:136]
+			api.update_status(status=a1)
+			api.update_status(status=a)
+			api.update_status(status=message)
+			self.topic[top][1] = id
+			self.topic[top][2] = neg
+			self.topic[top][3] = pos
+			self.topic[top][4] = self.topic[top][4] + 1	
 	
 	def addtopic(self, name, issue, id, neg, pos):
 		self.topic.append([[self.counter, name, issue], id, neg, pos, 0])
