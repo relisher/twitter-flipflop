@@ -2,10 +2,11 @@ import getcsv as getcsv
 import parsejson
 import sentiment
 import math
+import twitterposter
 
 tweets = []
 
-def run(file):
+def run(file, topic):
 	name = getcsv.getName(file)
 	user = getcsv.getUser(file)
 	tweet = getcsv.getTweets(file)
@@ -19,7 +20,10 @@ def run(file):
 		neg = max(max(emote[0], emote[2]), emote[3])
 		pos = emote[1]
 		tweets.append((body, name, user, date, id, neg, pos))
-	print tweets
+	for item in tweets:
+		twitterposter.newtweet(topic, id, neg, pos)
+
+		
 
 
 
