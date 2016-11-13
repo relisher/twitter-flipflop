@@ -20,24 +20,26 @@ def search():
 
 
     for s in statusesTrump:
-        if("rigged" in s.text.lower()):
-            trumpRigged.append(s)
-        elif("obamacare" in s.text.lower()):
-            trumpObamacare.append(s)
-        elif("gay" in s.text.lower()):
-            trumpGay.append(s)
-        elif("obama" in s.text.lower()):
-            trumpObama.append(s)
+        if(!s.text.startsWith("RT")):
+            if("rigged" in s.text.lower()):
+                trumpRigged.append(s)
+            elif("obamacare" in s.text.lower()):
+                trumpObamacare.append(s)
+            elif("gay" in s.text.lower()):
+                trumpGay.append(s)
+            elif("obama" in s.text.lower()):
+                trumpObama.append(s)
 
     for s in statusesClinton:
-        if("tpp" in s.text.lower()):
-            clintonTPP.append(s)
-        elif("russia" in s.text.lower()):
-            clintonRussia.append(s)
-        elif("keystone" in s.text.lower()):
-            clintonKeystone.append(s)
-        elif("gay" in s.text.lower()):
-            clintonGay.append(s)
+        if(!s.text.startsWith("RT")):
+            if("tpp" in s.text.lower()):
+                clintonTPP.append(s)
+            elif("russia" in s.text.lower()):
+                clintonRussia.append(s)
+            elif("keystone" in s.text.lower()):
+                clintonKeystone.append(s)
+            elif("gay" in s.text.lower()):
+                clintonGay.append(s)
 
     return
 
